@@ -130,7 +130,19 @@ $(document).ready(function () {
 <p>NICKNAME: nicholas.missineo</p>
 <p>TEAM: Derek</p>
 <p>ROUND: 1st</p>
-<div id="references" class="section level3">
+<div id="summary" class="section level3"> 
+<h3>Summary:</h3>
+<ul>
+<li><p>sono stati imputati i missing tramite la moda (se variabile categoriale), la mediana (se variabile numerica) e un modello lineare nel caso della variabile "lot frontage" utilizzando come esplicativa la variabile "lot area".</li>
+<li><p>è stata una nuova variabile chiamata: "TotalSF" la quale risulta essere la somma delle 3 variabili "Total.Bsmt.SF","X1st.Flr.SF" e "X2nd.Flr.SF"</li>
+<li><p>sono state  eliminate 33 variabili dopo verifica grafica attraverso plot e boxplot</li> 
+<li><p>Dopo aver caricato le librerie MASS, gbm e caret è stato utilizzato un modello gbm al fine di capire quale variabili fossero realmente importanti per la nostra analisi, da qui ho eliminato le variabili con importanza minore di 15.</li>
+<li><p>Ho utilizzato il modello gbm nuovamente ed ho eliminato altre 8 variabili (street,Alley,Condition.2,Mas.Vnr.Type,Bsmt.Cond,Heating,Fireplace.Qu,Misc.val)</li>
+<li><p>Utilizzando la libreria e1071 ho applicato una SVM (Support vector machine for regression) al fine di creare le stime e le previsioni</li>
+<li><p>PRIME SEI PREVISIONI 197109.7 260085.7 196466.0 209430.8 172624.9 205150.5</li>
+</ul>
+</div>
+<div id="references" class="section level3"> 
 <h3>References:</h3>
 <ul>
 <li><p>Data Explanatory, I took some advice of Data Visualization <a href="https://www.kaggle.com/notaapple/detailed-exploratory-data-analysis-using-r" class="uri">https://www.kaggle.com/notaapple/detailed-exploratory-data-analysis-using-r</a></p></li>
