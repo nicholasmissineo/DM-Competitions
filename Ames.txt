@@ -1,0 +1,11 @@
+AMES PRICE SUMMARY
+1. sono stati imputati i missing tramite la moda (se variabile categoriale), la mediana (se variabile numerica) 
+   e un modello lineare nel caso della variabile "lot frontage" utilizzando come esplicativa la variabile "lot area".
+2. è stata una nuova variabile chiamata: "TotalSF" la quale risulta essere la somma delle 3 variabili "Total.Bsmt.SF",
+   "X1st.Flr.SF" e "X2nd.Flr.SF"
+3. sono state  eliminate 33 variabili dopo verifica grafica attraverso plot e boxplot
+4. Dopo aver caricato le librerie MASS, gbm e caret è stato utilizzato un modello gbm al fine di capire quale variabili 
+  fossero realmente importanti per la nostra analisi, da qui ho eliminato le variabili con importanza minore di 15.
+5. Ho utilizzato il modello gbm nuovamente ed ho eliminato altre 8 variabili (street,Alley,Condition.2,Mas.Vnr.Type,Bsmt.Cond,Heating,Fireplace.Qu,Misc.val)
+6. Utilizzando la libreria e1071 ho applicato una SVM (Support vector machine for regression) al fine di creare le stime e le previsioni
+7.  PRIME SEI PREVISIONI 197109.7 260085.7 196466.0 209430.8 172624.9 205150.5
